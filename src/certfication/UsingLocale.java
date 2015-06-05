@@ -79,5 +79,23 @@ public class UsingLocale {
         } catch (ParseException pe) {
             System.out.println("parse exc");
         }
+        System.out.println("");
+
+        System.out.println("######### DEFAULT LOCALE ########");
+        // store locale so can put it back at end
+        Locale initial = Locale.getDefault();
+        System.out.println(initial);
+        df = DateFormat.getInstance();
+        System.out.println(df.format(d2));
+        // set locale to Germany
+        Locale.setDefault(Locale.GERMANY);
+        System.out.println(Locale.getDefault());
+        df = DateFormat.getInstance();
+        System.out.println(df.format(d2));
+        // put original locale back
+        Locale.setDefault(initial);
+        System.out.println(Locale.getDefault());
+        df = DateFormat.getInstance();
+        System.out.println(df.format(d2));
     }
 }
