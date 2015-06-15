@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package certfication;
+package certfication.stringDataResource;
 
+import certfication.util.U;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
